@@ -1,0 +1,11 @@
+The Tailwind CSS JIT mode can produce unexpected behavior when dealing with complex responsive design systems.  For example, using `@apply` directives within responsive modifiers can lead to styles not applying as expected or conflicting with other styles. Consider this example:
+
+```html
+<div class="md:bg-red-500 lg:bg-blue-500">
+  <p class="@apply md:text-white lg:text-black">
+     This text should be white on md screens and black on lg screens.
+  </p>
+</div>
+```
+
+This *might* not work as expected due to the interplay of `@apply` and the responsive modifiers. JIT mode's order of operations can cause unexpected overrides.
