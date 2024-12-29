@@ -1,0 +1,11 @@
+To fix the issue, avoid using `@apply` inside responsive modifiers.  A cleaner approach is to directly apply classes or use a more structured approach to your responsive design.  Here's a corrected example:
+
+```html
+<div class="md:bg-red-500 md:text-white lg:bg-blue-500 lg:text-black">
+  <p>
+     This text should be white on md screens and black on lg screens.
+  </p>
+</div>
+```
+
+This version directly applies the background and text colors for each breakpoint, eliminating the potential conflict and ensuring consistent results.  This approach provides greater clarity and predictability in your CSS.
